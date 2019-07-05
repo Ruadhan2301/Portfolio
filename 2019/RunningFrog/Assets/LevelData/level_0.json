@@ -1,0 +1,34 @@
+{
+	"obstacle_0" : {
+		"distance" : "10",
+		"type" : "rock"
+	},
+	"obstacle_1" : {
+		"distance" : "15",
+		"type" : "log"
+	},
+	"obstacle_2" : {
+		"distance" : "20",
+		"type" : "rock"
+	},
+	"obstacle_3" : {
+		"distance" : "25",
+		"type" : "log"
+	},
+	"obstacle_4" : {
+		"distance" : "30",
+		"type" : "rock"
+	},
+	"obstacle_5" : {
+		"distance" : "35",
+		"type" : "log"
+	},
+	"obstacle_6" : {
+		"distance" : "40",
+		"type" : "rock"
+	},
+	"obstacle_7" : {
+		"distance" : "45",
+		"type" : "log"
+	}
+}
