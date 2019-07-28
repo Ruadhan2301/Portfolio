@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Revive Management";
+}
+<div>
+    <div id="top-navbar" class="container navbar rv-navbar">
+        <button id="LoginButton" v-on:click="login" v-if="!loggedIn">Login</button>
+        <button id="LogoutButton" v-on:click="logout" v-if="loggedIn">Logout</button>
+        <button id="RegisterButton" v-on:click="register">Register</button>
+    </div>
+    <div id="account-system">
+        <div id="login-system" v-if="loginMode" class="rv-signinbox">
+            <button type="button" v-on:click="close" style="float:right;">X</button>
+            <div>
+                <label>Welcome! Please Log In!</label>
+            </div>
+            <div>
+                <input type="email" v-model="loginUser.email" placeholder="email@email.com">
+                <input type="password" v-model="loginUser.password" placeholder="password">
+                <input type="submit" value="Log In" v-on:click="login" :disabled=isValid>
+            </div>
+            <ul class="errors">
+                <li v-show="!validation.email">Please provide a valid email address.</li>
+                <li v-show="!validation.password">password cannot be empty.</li>
+            </ul>
+            <label>{{ displayUserName }}</label>
+        </div>
+        <div style="margin-top: 1rem;"></div>
+        <div id="register-system" v-if="registerMode" class="rv-signinbox">
+            <button type="button" v-on:click="close" style="float:right;">X</button>
+            <div>
+                <label>Please enter your details!</label>
+            </div>
+            <div>
+                <input type="text" v-model="newUser.name" placeholder="Username">
+                <input type="email" v-model="newUser.email" placeholder="email@email.com">
+                <input type="password" v-model="newUser.password" placeholder="password">
+                <input type="submit" value="Create Account" v-on:click="register">
+
+            </div>
+            <ul class="errors">
+                <li v-show="!newUserValidation.name">Name cannot be empty.</li>
+                <li v-show="!newUserValidation.email">Please provide a valid email address.</li>
+                <li v-show="!newUserValidation.password">password cannot be empty.</li>
+            </ul>
+        </div>
+        <div id="activeaccount-system" v-if="hasUser" class="rv-signinbox">
+            <div>
+                <p>Welcome {{ activeUser.displayName }}</p>
+                <p>Email: (<span>{{ activeUser.email }})</span></p>
+                <p>Your UID is: (<span>{{ activeUser.uid }})</span></p>
+            </div>
+            <div>
+                <input type="submit" value="Log Out" v-on:click="logout">
+            </div>
+        </div>
+    </div>
+
+</div>

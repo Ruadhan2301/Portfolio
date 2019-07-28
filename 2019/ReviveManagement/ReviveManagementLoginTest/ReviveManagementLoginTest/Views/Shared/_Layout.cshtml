@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Login Demonstration</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app" class="container body-content">
+        @RenderBody()
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/main")
+    @RenderSection("Scripts", required: false)
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDqhIkMW5HTUY6Vy3Jxaa41_xU_hGcAcZw",
+            authDomain: "revivemanagementdemo.firebaseapp.com",
+            databaseURL: "https://revivemanagementdemo.firebaseio.com",
+            projectId: "revivemanagementdemo",
+            storageBucket: "revivemanagementdemo.appspot.com",
+            messagingSenderId: "558528869241",
+            appId: "1:558528869241:web:f8753045f35209e7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>
