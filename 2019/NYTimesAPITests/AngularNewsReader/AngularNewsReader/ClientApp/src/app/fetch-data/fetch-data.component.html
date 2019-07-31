@@ -1,0 +1,16 @@
+<h1>NY Times Articles</h1>
+
+<p *ngIf="!articles"><em>Loading NY Times Articles...</em></p>
+<button (click)="prevPage()">Previous Page</button>
+<button (click)="nextPage()">Next Page</button>
+<p>Current Page: {{ page }}, items {{ itemRange }}</p>
+<p></p>
+<p *ngIf="updating">Loading</p>
+<ul *ngFor="let article of articles">
+  <li style="border: 1px solid black; border-radius: 1rem; padding:1rem;">
+    <img src="{{article.thumbnail}}" />
+    <h1>{{ article.headline.main }}</h1>
+    <p>{{ article.abstract }}</p>
+    <a>{{ article.web_url }}</a>
+  </li>
+</ul>
