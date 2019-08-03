@@ -1,0 +1,55 @@
+body{
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+}
+
+.test-a {
+	background-color: red;
+}
+
+.desc-text-1{
+	width: 24rem;
+}
+.desc-text-2{
+	width: 25rem;
+}
+.desc-text-3{
+	width: 31rem;
+}
+
+.min-container{
+	margin-left: 5rem;
+	margin-right: 5rem;
+}
+
+.img-scale-1 {
+	width: 25rem;	
+}
+
+.btn-purple{
+	background-color: #845CFF;
+	border-color: #845cff;
+	color: white;
+}
+
+.btn-purple:hover{
+	background-color: #845CFF;
+	border-color: #845cff;
+	color: white;
+}
+
+.primary-img
+	{
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 30rem;
+	}
+.overlay-img
+{
+	position: absolute;
+	top: -16rem;
+	left: 0px;
+	width: 30rem;
+	
+}

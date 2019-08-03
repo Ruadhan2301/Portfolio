@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Croner Test</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="Styles.css" />
+</head>
+<body>
+<div class="container body-content">
+<a class="btn btn-md btn-purple" href="./Index.html">BACK</a>
+<h1>Google Maps API</h1>
+
+<div id="googleMap" style="width:100%;height:50rem;"></div>
+</div>
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(53.477993, -2.266121),
+  zoom:14,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var contentString = '53.489656, -2.241142'
+var contentString2 = '53.463238, -2.291329'
+
+var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+var infowindow2 = new google.maps.InfoWindow({
+          content: contentString2
+        });
+		
+var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(53.489656, -2.241142),
+    map: map,
+    title: '53.489656, -2.241142'
+  });
+ var marker2 = new google.maps.Marker({
+    position: new google.maps.LatLng(53.463238, -2.291329),
+    map: map,
+    //infowindow.open(map, marker),
+    title: '53.463238, -2.291329'
+  });
+        marker.addListener('click', function() {
+		infowindow.content = contentString;
+          infowindow.open(map, marker);
+		  infowindow2.close();
+        });
+		marker2.addListener('click', function() {
+		infowindow.close();
+          infowindow2.open(map, marker2);
+        });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEyr2beDZMCleydeEYOzULnVB9nRaHq3Y&callback=myMap"></script>
+
+</body>
+</html>
