@@ -14,6 +14,8 @@ I think it worked okay.
 	This was an effort to make a simplistic 2D side-scrolling game. All the artwork is placeholder. Notably I spent some time playing around with Unity's 2D sprite animation mechanics.
 The only missing game-mechanic is the actual collision-detection with the obstacles
 
+- Various Technical Tests for Web Developer Applications
+
 2016
 - Bubble Raider level editor
 	When I worked for Playdemand, I was in charge of making the levels for Bubbleraider and its spinoffs. Every few months or so, I'd have to make 100 more levels in the space of a couple weeks and it was tedious as hell. So eventually, I got tired of asking for resources to make a level editor and built one for myself.
